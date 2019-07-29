@@ -3,7 +3,7 @@ Fast C-MEX for Array Lookups and Masking
 
 Suppose you need to mask indices of a large array
 ```
-argmin = find(x>=y, 1, 'last');
+argmin = find(x>=y, 1, 'first');
 argmax = find(x<=y, 1, 'last');
 maskedArray = x(argmin:argmax);
 ```
@@ -17,9 +17,9 @@ There is considerable time savings to the masking operation if the array is pres
 %
 %   argmax = csearch(x, 'le', y) is equivalent to MATLAB's find(x<=y, 1, 'last')
 %
-%   argmin = csearch(x, 'gt', y) is equivalent to MATLAB's find(x>y, 1, 'last')
+%   argmin = csearch(x, 'gt', y) is equivalent to MATLAB's find(x>y, 1, 'first')
 %
-%   argmin = csearch(x, 'ge', y) is equivalent to MATLAB's find(x>=y, 1, 'last')
+%   argmin = csearch(x, 'ge', y) is equivalent to MATLAB's find(x>=y, 1, 'first')
 %
 %   Class Support
 %   -------------
